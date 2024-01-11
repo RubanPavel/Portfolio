@@ -1,16 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-import { Button } from "../../../components/Button";
-import { SectionTitle } from "src/components";
+import {SectionTitle} from "@/components/SectionTitle";
+import {Button} from '@/components/Button';
 
 export const Contact = () => {
   return (
     <StyledContact>
       <SectionTitle>Contact</SectionTitle>
       <FormContact>
-        <Field placeholder={"name"} />
-        <Field placeholder={"subject"} />
-        <Field placeholder={"msg"} as={"textarea"} />
+        <Field placeholder={"name"}/>
+        <Field placeholder={"subject"}/>
+        <Field placeholder={"msg"} as={"textarea"}/>
         <Button type={"submit"}>Send MSG</Button>
       </FormContact>
     </StyledContact>

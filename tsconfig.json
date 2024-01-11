@@ -1,5 +1,23 @@
 {
   "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "@/components/*": [
+        "./components/*"
+      ],
+      "@/pages/*": [
+        "./pages/*"
+      ],
+      "@/contexts/*": [
+        "./contexts/*"
+      ],
+      "@/routes/*": [
+        "./routes/*"
+      ]
+    },
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
@@ -14,7 +32,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "preserve"
   },
-  "include": ["src"]
+  "include": ["src"],
+  "exclude": ["node_modules", "build"]
 }
