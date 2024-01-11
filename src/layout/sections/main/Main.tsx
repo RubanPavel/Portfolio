@@ -1,7 +1,9 @@
+import { FlexWrapper } from 'components/FlexWrapper';
 import React from 'react';
 import styled from "styled-components";
 import imgMy from '../../../assets/img/PHSQUAT108953028.jpg'
-import {FlexWrapper} from '../../../components/FlexWrapper';
+
+
 
 export const Main = () => {
   return (

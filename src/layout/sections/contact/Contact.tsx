@@ -1,7 +1,8 @@
+import { Button } from "components/Button";
+import { SectionTitle } from "components/SectionTitle";
 import React from "react";
 import styled from "styled-components";
-import {SectionTitle} from "@/components/SectionTitle";
-import {Button} from '@/components/Button';
+
 
 export const Contact = () => {
   return (

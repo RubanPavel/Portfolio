@@ -1,2 +1,2 @@
-export * from "./aboutMe";
+export * from "./AboutMe";
 
