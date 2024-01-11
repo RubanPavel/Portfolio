@@ -20,7 +20,6 @@ export const Contact = () => {
 
 const StyledContact = styled.section`
   min-height: 50vh;
-  background-color: darkgreen;
 `;
 const FormContact = styled.section`
   max-width: 550px;

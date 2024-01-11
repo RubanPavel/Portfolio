@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
-import { Logo } from "../../components/logo/Logo";
-import { Menu } from "../../components/menu/Menu";
+import {Logo} from "components/logo/Logo";
+import {Menu} from "components/menu/Menu";
+import {Container} from "components/Container";
+import {FlexWrapper} from "components";
 
 const menuArr = [
   { href: "", title: "Home" },
@@ -11,14 +13,17 @@ const menuArr = [
 export const Header = () => {
   return (
     <StyledHeader>
-      <Logo />
-      <Menu menuArr={menuArr} />
+      <Container>
+        <FlexWrapper align={'center'} justify={'space-between'}>
+          <Logo/>
+          <Menu menuArr={menuArr}/>
+        </FlexWrapper>
+      </Container>
     </StyledHeader>
   );
 };
 
 const StyledHeader = styled.header`
-  background-color: burlywood;
   display: flex;
   justify-content: space-between;
 `;

@@ -1,6 +1,7 @@
+import { Icon } from "icon/Icon";
 import React from "react";
 import styled from "styled-components";
-import { Icon } from "../../../../icon/Icon";
+
 
 type propsSkill = {
   iconId: string;

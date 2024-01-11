@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { FlexWrapper } from "../../../components/FlexWrapper";
-import { SectionTitle } from "../../../components/SectionTitle";
+import { FlexWrapper } from "components";
+import { SectionTitle } from "components";
 import { Work } from "./work/Work";
 
 const worksArr = [
@@ -51,5 +51,4 @@ export const Works = () => {
 
 const StyledWorks = styled.section`
   min-height: 100vh;
-  background-color: chocolate;
 `;

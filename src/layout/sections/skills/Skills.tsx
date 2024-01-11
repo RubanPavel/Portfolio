@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { FlexWrapper } from "../../../components/FlexWrapper";
-import { SectionTitle } from "../../../components/SectionTitle";
+import { FlexWrapper } from "components";
+import { SectionTitle } from "components";
 import { Skill } from "./skill/Skill";
 
 const skillsArr = [
@@ -36,6 +36,5 @@ export const Skills = () => {
 };
 
 const StyledSkills = styled.section`
-  background-color: aquamarine;
   min-height: 100vh;
 `;

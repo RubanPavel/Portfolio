@@ -1,9 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {Icon} from "icon/Icon";
-import { FlexWrapper } from 'components/FlexWrapper';
-
-
+import {FlexWrapper} from 'components/FlexWrapper';
 
 
 const footerData = [
@@ -21,9 +19,9 @@ export const Footer = () => {
         <Name>Pavel Ruban</Name>
         <SocialList>
           <SocialItem>
-            {footerData.map((f) => {
+            {footerData.map((f, index) => {
               return (
-                <SocialLink>
+                <SocialLink key={index}>
                   <Icon iconId={f.iconId}/>
                 </SocialLink>
               )
@@ -32,7 +30,6 @@ export const Footer = () => {
         </SocialList>
         <Copyright>Like me on LinkedIn, Instagram, Behance, Dribble </Copyright>
       </FlexWrapper>
-
     </StyledFooter>
   );
 };

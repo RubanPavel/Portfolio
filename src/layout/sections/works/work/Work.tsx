@@ -22,7 +22,6 @@ export const Work = (props: WorkProps) => {
 };
 
 const StyledWork = styled.div`
-  background-color: aquamarine;
   max-width: 540px;
   width: 100%;
 `;
