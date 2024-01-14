@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {Menu} from "components/menu/Menu";
 import {Container} from "components/Container";
 import {FlexWrapper} from "components";
+import {Icon} from "icon/Icon";
 
 const menuArr = [
   {href: "https://www.onliner.by/", title: "Home"},
@@ -15,8 +16,9 @@ export const Header = () => {
   return (
     <StyledHeader>
       <Container>
-        <FlexWrapper align={'center'} justify={'space-between'}>
+        <FlexWrapper align={'center'} justify={'space-between'} direction={"column"}>
           <Menu menuArr={menuArr}/>
+          <Icon iconId={'menuBottom'} width={"950"} height={"2"} viewBox={"0 0 950 2"}/>
         </FlexWrapper>
       </Container>
     </StyledHeader>

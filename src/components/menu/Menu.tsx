@@ -29,6 +29,7 @@ const StyledMenu = styled.nav`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    
   }
 
 `;

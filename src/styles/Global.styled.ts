@@ -5,13 +5,14 @@ export const GlobalStyled = createGlobalStyle`
 
   body {
     margin: 0;
-    
+
     font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     color: ${theme.colors.font};
+    line-height: 1.2;
   }
 
   *,
@@ -23,6 +24,14 @@ export const GlobalStyled = createGlobalStyle`
   a {
     color: unset;
     text-decoration: unset;
+  }
+
+  h1, h2, h3 {
+    margin: 0;
+  }
+
+  ul {
+    padding: 0;
   }
 
   ul {
