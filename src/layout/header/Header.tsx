@@ -5,11 +5,11 @@ import {Container} from "components/Container";
 import {FlexWrapper} from "components";
 
 const menuArr = [
-  {href: "#", title: "Home"},
-  {href: "#", title: "About me"},
-  {href: "#", title: "Skills"},
-  {href: "#", title: "Works"},
-  {href: "#", title: "Contacts"}
+  {href: "https://www.onliner.by/", title: "Home"},
+  {href: "https://www.onliner.by/", title: "About me"},
+  {href: "https://www.onliner.by/", title: "Skills"},
+  {href: "https://www.onliner.by/", title: "Works"},
+  {href: "https://www.onliner.by/", title: "Contacts"}
 ];
 export const Header = () => {
   return (
