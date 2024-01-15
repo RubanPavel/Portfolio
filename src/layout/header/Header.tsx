@@ -4,6 +4,7 @@ import {Menu} from "components/menu/Menu";
 import {Container} from "components/Container";
 import {FlexWrapper} from "components";
 import {Icon} from "icon/Icon";
+import {theme} from "styles/Theme";
 
 const menuArr = [
   {href: "https://www.onliner.by/", title: "Home"},
@@ -32,4 +33,5 @@ const StyledHeader = styled.header`
   left: 0;
   right: 0;
   z-index: 11000;
+  background-color: ${theme.colors.primaryBg};
 `;

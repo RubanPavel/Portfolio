@@ -2,6 +2,7 @@ import React from 'react';
 import styled from "styled-components";
 import {Icon} from "icon/Icon";
 import {FlexWrapper} from 'components/FlexWrapper';
+import { Container } from 'components/Container';
 
 
 const footerData = [
@@ -15,21 +16,23 @@ const footerData = [
 export const Footer = () => {
   return (
     <StyledFooter>
-      <FlexWrapper direction={'column'} align={'center'}>
-        <Name>Pavel Ruban</Name>
-        <SocialList>
-          <SocialItem>
-            {footerData.map((f, index) => {
-              return (
-                <SocialLink key={index}>
-                  <Icon iconId={f.iconId}/>
-                </SocialLink>
-              )
-            })}
-          </SocialItem>
-        </SocialList>
-        <Copyright>Like me on LinkedIn, Instagram, Behance, Dribble </Copyright>
-      </FlexWrapper>
+      <Container>
+        <FlexWrapper direction={'column'} align={'center'}>
+          <Name>Pavel Ruban</Name>
+          <SocialList>
+            <SocialItem>
+              {footerData.map((f, index) => {
+                return (
+                  <SocialLink key={index}>
+                    <Icon iconId={f.iconId}/>
+                  </SocialLink>
+                )
+              })}
+            </SocialItem>
+          </SocialList>
+          <Copyright>Like me on LinkedIn, Instagram, Behance, Dribble </Copyright>
+        </FlexWrapper>
+      </Container>
     </StyledFooter>
   );
 };

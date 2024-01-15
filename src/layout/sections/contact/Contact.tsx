@@ -1,19 +1,22 @@
-import { Button } from "components/Button";
-import { SectionTitle } from "components/SectionTitle";
+import {Button} from "components/Button";
+import {SectionTitle} from "components/SectionTitle";
 import React from "react";
 import styled from "styled-components";
+import {Container} from "components/Container";
 
 
 export const Contact = () => {
   return (
     <StyledContact>
-      <SectionTitle>Contact</SectionTitle>
-      <FormContact>
-        <Field placeholder={"name"}/>
-        <Field placeholder={"subject"}/>
-        <Field placeholder={"msg"} as={"textarea"}/>
-        <Button type={"submit"}>Send MSG</Button>
-      </FormContact>
+      <Container>
+        <SectionTitle>Contact</SectionTitle>
+        <FormContact>
+          <Field placeholder={"name"}/>
+          <Field placeholder={"subject"}/>
+          <Field placeholder={"msg"} as={"textarea"}/>
+          <Button type={"submit"}>Send MSG</Button>
+        </FormContact>
+      </Container>
     </StyledContact>
   );
 };
