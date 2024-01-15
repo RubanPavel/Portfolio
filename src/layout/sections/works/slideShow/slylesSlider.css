@@ -245,6 +245,7 @@
 }
 
 .btn {
+    margin:  0 10px;
     display: inline-block;
     padding: 13px 20px;
     color: #fff;

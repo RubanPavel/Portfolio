@@ -1,8 +1,6 @@
 import React from 'react';
-import {Zoom} from 'react-slideshow-image';
+import {Fade} from 'react-slideshow-image';
 import 'layout/sections/works/slideShow/slylesSlider.css'
-/*import img1 from '../../../../assets/img/Rectangle 14.jpg'
-import img2 from '../../../../assets/img/Rectangle 14.jpg'*/
 import img1 from '../../../../assets/img/Rectangle 14.jpg'
 import img2 from '../../../../assets/img/Rectangle 16.png'
 
@@ -33,17 +31,20 @@ export const Example = () => {
   const images = [
     img1,
     img2,
-    img2
+    img2,
+    img1
   ];
   const indicators = () => (<span className="indicator"></span>);
 
   return (
 
 
-    <Zoom
+    <Fade
       {...properties}
       indicators={indicators}
-      scale={0.6}
+      duration={7000}
+      defaultIndex={1}
+
     >
 
 
@@ -69,7 +70,7 @@ export const Example = () => {
       ))}
 
 
-    </Zoom>
+    </Fade>
 
 
   )
