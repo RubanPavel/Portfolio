@@ -36,7 +36,7 @@ const FormContact = styled.section`
   
   textarea{
     resize: none;
-    height: 170px;
+    height: 150px;
   }
 `;
 const Field = styled.input`
