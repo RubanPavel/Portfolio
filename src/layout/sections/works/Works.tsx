@@ -2,32 +2,28 @@ import React from "react";
 import styled from "styled-components";
 import {SectionTitle} from "components";
 import {Container} from "components/Container";
-import {Example} from "layout/sections/works/slideShow/SlideShow";
+import {SlideShow} from "layout/sections/works/slideShow/SlideShow";
+import img1 from "assets/img/Rectangle 14.jpg";
+import img2 from "assets/img/Rectangle 16.png";
 
-
-
-const worksArr = [
+const imagesWorks = [
   {
-    hrefOne: "Home",
-    title: "Home",
-    hrefTwo: "Home",
-    scr: "Home",
-    text: "Home",
-  },
-  {
-    hrefOne: "Home",
-    title: "Home",
-    hrefTwo: "Home",
-    scr: "Home",
-    text: "Home",
-  },
-  {
-    hrefOne: "Home",
-    title: "Home",
-    hrefTwo: "Home",
-    scr: "Home",
-    text: "Home",
-  },
+    img: img1,
+    title: 'ToDoList1',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, aperiam beatae eius eos fugiat fugit hic illo nobis nostrum tempora!'
+  }, {
+    img: img2,
+    title: 'ToDoList2',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, aperiam beatae eius eos fugiat fugit hic illo nobis nostrum tempora!'
+  }, {
+    img: img1,
+    title: 'ToDoList3',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, aperiam beatae eius eos fugiat fugit hic illo nobis nostrum tempora!'
+  }, {
+    img: img2,
+    title: 'ToDoList4',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, aperiam beatae eius eos fugiat fugit hic illo nobis nostrum tempora!'
+  }
 ];
 export const Works = () => {
   return (
@@ -35,26 +31,12 @@ export const Works = () => {
 
       <Container>
         <SectionTitle>My Works</SectionTitle>
-        <Example/>
-      {/*  <FlexWrapper justify={"center"} align={'center'} direction={'column'}>
-          {worksArr.map((w, index) => {
-            return (
-              <Work
-                key={index}
-                title={w.title}
-                hrefOne={w.hrefOne}
-                hrefTwo={w.hrefTwo}
-                scr={w.scr}
-                text={w.text}
-              />
-            );
-          })}
-        </FlexWrapper>*/}
+        <SlideShow images={imagesWorks}/>
       </Container>
     </StyledWorks>
   );
 };
 
 const StyledWorks = styled.section`
- /* min-height: 80vh;*/
+  /*min-height: 100vh;*/
 `;

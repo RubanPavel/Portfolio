@@ -12,6 +12,7 @@ const skillsArr = [
   {title: "Adobe Photoshop", iconId: "skill", grade: 'grade'},
   {title: "Adobe Photoshop", iconId: "skill", grade: 'grade'},
   {title: "Adobe Photoshop", iconId: "skill", grade: 'grade'},
+  {title: "Adobe Photoshop", iconId: "skill", grade: 'grade'},
   {title: "Adobe Photoshop", iconId: "skill", grade: 'grade'}
 ];
 
@@ -43,7 +44,6 @@ const StyledSkills = styled.section`
 `;
 
 export const SectionText = styled.h3`
-  padding-bottom: 60px;
   text-align: center;
   font-size: 18px;
   font-weight: 400;

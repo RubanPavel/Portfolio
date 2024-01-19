@@ -16,8 +16,9 @@ export const Icon = (props: propsIcon) => {
       viewBox={props.viewBox || "0 0 1024 1024"}
       fill={props.fill || "none"}
       xmlns="http://www.w3.org/2000/svg"
+
     >
-      <use xlinkHref={`${imgSprite}#${props.iconId}`} />
+      <use xlinkHref={`${imgSprite}#${props.iconId}`}/>
     </svg>
   );
 };

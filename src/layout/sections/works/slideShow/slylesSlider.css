@@ -41,7 +41,7 @@
     content: "";
     display: block;
     position: absolute;
-    top: -30px;
+    top: -110px;
     left: 5px;
     width: 36px;
     height: 3px;
@@ -225,6 +225,15 @@
     align-items: center;
 }
 
+.slide-box {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .caption {
     padding: 0 100px;
 }
@@ -237,8 +246,17 @@
     text-transform: uppercase;
 }
 
-.text {
+.text-inside {
     margin: 0 auto;
+    max-width: 1000px;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.text-outside {
+    margin: -20px;
+    width: 80%;
+   /* margin: 0 auto;*/
     max-width: 1000px;
     font-size: 18px;
     line-height: 1.4;

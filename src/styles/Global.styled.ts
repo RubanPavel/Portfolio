@@ -24,6 +24,7 @@ export const GlobalStyled = createGlobalStyle`
   a {
     color: unset;
     text-decoration: unset;
+    cursor:pointer;
   }
 
   h1, h2, h3 {
@@ -41,6 +42,7 @@ export const GlobalStyled = createGlobalStyle`
   button {
     background-color: unset;
     border: none;
+    cursor:pointer;
   }
 
   section {

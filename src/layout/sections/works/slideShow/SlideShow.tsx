@@ -1,8 +1,6 @@
 import React from 'react';
 import {Fade} from 'react-slideshow-image';
 import 'layout/sections/works/slideShow/slylesSlider.css'
-import img1 from '../../../../assets/img/Rectangle 14.jpg'
-import img2 from '../../../../assets/img/Rectangle 16.png'
 
 const properties = {
   prevArrow: <div className="arrow prev">
@@ -26,36 +24,30 @@ const properties = {
           </span>
     </div>
 }
-export const Example = () => {
+type SlideShowProps = {
+  images: Array<{ img: string, title: string, description: string }>
 
-  const images = [
-    img1,
-    img2,
-    img2,
-    img1
-  ];
-  const indicators = () => (<span className="indicator"></span>);
-
+}
+const indicators = () => (<span className="indicator"></span>);
+export const SlideShow = (props: SlideShowProps) => {
   return (
-
-
+    <>
     <Fade
       {...properties}
       indicators={indicators}
       duration={7000}
       defaultIndex={1}
-
     >
+      {props.images.map((i, index) => (
 
 
-      {images.map((each, index) => (
-        <div key={index} style={{width: "100%"}}>
-          <img style={{objectFit: "cover", width: "100%", filter: 'brightness(60%)'}} alt="Slide Image" src={each}/>
+        <div className="slide-box" key={index} >
+          <img style={{objectFit: "cover", width: "100%", filter: 'brightness(60%)'}} alt="Slide Image" src={i.img}/>
           <div className="slide-content">
             <div className="caption">
-              <div className="title">Slide title</div>
-              <div className="text">
-                <p>Slide description </p>
+              <div className="title">{i.title}</div>
+              <div className="text-inside">
+                <p>{i.description}</p>
               </div>
               <a href="#top" className="btn">
                 <span className="btn-inner">Learn More</span>
@@ -65,15 +57,15 @@ export const Example = () => {
               </a>
             </div>
           </div>
+          <div className="text-outside">
+            <p>{i.description}</p>
+          </div>
         </div>
 
       ))}
-
-
     </Fade>
 
-
-  )
-    ;
+    </>
+  );
 };
 

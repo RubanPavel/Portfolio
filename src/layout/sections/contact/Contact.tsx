@@ -1,4 +1,4 @@
-import {Button} from "components/Button";
+
 import {SectionTitle} from "components/SectionTitle";
 import React from "react";
 import styled from "styled-components";
@@ -11,11 +11,12 @@ export const Contact = () => {
     <StyledContact>
       <Container>
         <SectionTitle>Contact</SectionTitle>
+        <ContactText>Want to know more or just chat? <br /> You are welcome!</ContactText>
         <FormContact>
-          <Field placeholder={"Name"}/>
-          <Field placeholder={"Subject"}/>
-          <Field placeholder={"Msg"} as={"textarea"}/>
-          <Button type={"submit"}>Send MSG</Button>
+          <Field placeholder={"Name:"}/>
+          <Field placeholder={"Email:"}/>
+          <Field placeholder={"Message:"} as={"textarea"}/>
+          <Button type={"submit"}>Send message</Button>
         </FormContact>
       </Container>
     </StyledContact>
@@ -25,7 +26,7 @@ export const Contact = () => {
 const StyledContact = styled.section`
   
 `;
-const FormContact = styled.section`
+const FormContact = styled.div`
   max-width: 550px;
   width: 100%;
   display: flex;
@@ -54,4 +55,24 @@ const Field = styled.input`
     color: #666666;
     
   }
+`;
+const ContactText = styled.h2`
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: -20px;
+  margin-bottom: 40px;
+`
+const Button = styled.button`
+  width: 180px;
+  height: 42px;
+  background-color: ${theme.colors.font};
+  border-radius: 25px;
+
+
+  color: #FFF;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 20px;
 `;
