@@ -41,7 +41,7 @@
     content: "";
     display: block;
     position: absolute;
-    top: -110px;
+    top: -150px;
     left: 5px;
     width: 36px;
     height: 3px;
@@ -226,17 +226,34 @@
 }
 
 .slide-box {
+    position: relative;
     width: 100%;
     display: flex;
     text-align: center;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+
 }
 
-.caption {
+/*.slide-box:hover:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    backdrop-filter: blur(4px);
+    opacity: 1;
+}*/
+
+
+.caption{
     padding: 0 100px;
+    opacity: 1;
 }
+
 
 .title {
     margin: 0 auto 15px;
@@ -322,15 +339,26 @@
 
 .arrow {
     margin: -33px 0 0;
-    padding: 20px;
     position: absolute;
-    top: 50%;
+    top: 40%;
     cursor: pointer;
     z-index: 3;
+
+    background: #666666;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
 }
 
 .prev {
-    left: 30px;
+    left: -70px;
 }
 
 .prev:hover .svg {
@@ -338,7 +366,7 @@
 }
 
 .next {
-    right: 30px;
+    right: -70px;
 }
 
 .next:hover .svg {
@@ -348,8 +376,6 @@
 .svg {
     position: relative;
     left: 0;
-    width: 14px;
-    height: 26px;
-    fill: #fff;
+    right: 0;
     transition: left 0.2s ease;
 }
