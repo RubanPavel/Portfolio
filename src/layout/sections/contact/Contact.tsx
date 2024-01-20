@@ -75,4 +75,14 @@ const Button = styled.button`
   font-size: 18px;
   font-weight: 400;
   margin-top: 20px;
+
+  &:hover {
+    transform: translateY(-1px);
+    animation: ease;
+  }
+
+  &:active {
+    background: black;
+    opacity: 0.8;
+  }
 `;
