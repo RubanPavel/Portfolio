@@ -5,15 +5,14 @@ import {Skill} from "./skill/Skill";
 import {Container} from "components/Container";
 
 const skillsArr = [
-  {title: "Adobe Photoshop", iconId: "skill", grade: 'grade'},
-  {title: "Adobe Photoshop", iconId: "skill", grade: 'grade'},
-  {title: "Adobe Photoshop", iconId: "skill", grade: 'grade'},
-  {title: "Adobe Photoshop", iconId: "skill", grade: 'grade'},
-  {title: "Adobe Photoshop", iconId: "skill", grade: 'grade'},
-  {title: "Adobe Photoshop", iconId: "skill", grade: 'grade'},
-  {title: "Adobe Photoshop", iconId: "skill", grade: 'grade'},
-  {title: "Adobe Photoshop", iconId: "skill", grade: 'grade'},
-  {title: "Adobe Photoshop", iconId: "skill", grade: 'grade'}
+  {title: "JAVASCRIPT", iconId: "JS_Logo", width: '120', height: '120', viewBox: '0 0 120 120', grade: 'grade'},
+  {title: "Typescript", iconId: "TS_Logo", width: '120', height: '120', viewBox: '0 0 120 120', grade: 'grade'},
+  {title: "REDUX", iconId: "Redux_Logo", width: '120', height: '120', viewBox: '0 0 120 120', grade: 'grade'},
+  {title: "Figma", iconId: "Figma_Logo", width: '59', height: '90', viewBox: '0 0 59 90', grade: 'grade'},
+  {title: "JAVASCRIPT", iconId: "JS_Logo", width: '120', height: '120', viewBox: '0 0 120 120', grade: 'grade'},
+  {title: "Typescript", iconId: "TS_Logo", width: '120', height: '120', viewBox: '0 0 120 120', grade: 'grade'},
+  {title: "REDUX", iconId: "Redux_Logo", width: '120', height: '120', viewBox: '0 0 120 120', grade: 'grade'},
+  {title: "Figma", iconId: "Figma_Logo", width: '59', height: '90', viewBox: '0 0 59 90', grade: 'grade'}
 ];
 
 export const Skills = () => {
@@ -27,9 +26,7 @@ export const Skills = () => {
             return (
               <Skill
                 key={index}
-                title={s.title}
-                iconId={s.iconId}
-                grade={s.grade}
+                {...s}
               />
             );
           })}
