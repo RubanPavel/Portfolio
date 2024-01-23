@@ -1,9 +1,14 @@
 import React from 'react';
 import { ButtonNext} from "pure-react-carousel";
 import 'layout/sections/works/slideShow/slylesSlider.css'
-export const ArrowNext = () => {
+
+type ArrowNextProps = {
+  direction: 'right';
+  onClick: (direction: 'right') => void;
+}
+export const ArrowNext = ({direction, onClick}:ArrowNextProps) => {
   return (
-      <ButtonNext className="arrow next">
+      <ButtonNext onClick={() => onClick(direction)} className="arrow next">
                 <span className="svg">
             <svg fill="black" version="1.1" id="svg5-Layer_1" xmlns="http://www.w3.org/2000/svg"
                  xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14px" height="26px"
