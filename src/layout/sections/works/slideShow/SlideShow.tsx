@@ -31,33 +31,35 @@ type SlideShowProps = {
 const indicators = () => (<div className="indicator"></div>);
 export const SlideShow = (props: SlideShowProps) => {
   return (
-    <Fade
-      {...properties}
-      indicators={indicators}
-      duration={7000}
-      defaultIndex={1}
-    >
-      {props.images.map((i, index) => (
-        <div className="slide-box" key={index} >
-          <img style={{objectFit: "cover", width: "100%", filter: 'brightness(90%)'}} alt="SlideImage" src={i.img}/>
+    <div>
+      <Fade
+        {...properties}
+        indicators={indicators}
+        duration={7000}
+        defaultIndex={1}
+      >
+        {props.images.map((i, index) => (
+          <div className="slide-box" key={index}>
+            <img style={{objectFit: "cover", width: "100%", filter: 'brightness(90%)'}} alt="SlideImage" src={i.img}/>
 
-          <div className="caption">
-            <div className="title">{i.title}</div>
-            <div className="text-outside">
-              <p>{i.description}</p>
+            <div className="caption">
+              <div className="title">{i.title}</div>
+              <div className="text-outside">
+                <p>{i.description}</p>
+              </div>
+              <a href="https://soundcloud.com/discover" className="btn">
+                <span className="btn-inner">Learn More</span>
+              </a>
+              <a href="https://soundcloud.com/discover" className="btn">
+                <span className="btn-inner">Learn More</span>
+              </a>
             </div>
-            <a href="https://soundcloud.com/discover" className="btn">
-              <span className="btn-inner">Learn More</span>
-            </a>
-            <a href="https://soundcloud.com/discover" className="btn">
-              <span className="btn-inner">Learn More</span>
-            </a>
+
           </div>
 
-        </div>
-
-      ))}
-    </Fade>
+        ))}
+      </Fade>
+    </div>
 
 
   );

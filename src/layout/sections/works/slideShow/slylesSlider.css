@@ -29,29 +29,23 @@
 .indicator {
     cursor: pointer;
     text-align: center;
-    margin: 0;
-    position: relative;
-    width: 46px;
-    text-indent: -999em;
-    z-index: 10;
-}
-
-
-.indicator::before {
+    margin: 10px;
     content: "";
-    position: absolute;
-    top: -170px;
-    left: 5px;
-    width: 36px;
-    height: 3px;
+    height: 4px;
+    width: 40px;
     background: #000;
     transition: background 0.2s ease 0s;
 }
 
-.indicator.active::before {
+
+.indicator:active {
+    background: rgba(102, 102, 102, 0.5);;
+}
+
+/*.indicator.active::before {
     background: rgba(102, 102, 102, 0.5);;
 
-}
+}*/
 
 .react-slideshow-container {
     display: -webkit-box;
@@ -69,6 +63,10 @@
     cursor: pointer
 }
 
+/*.carousel-size{
+    width: 1000px;
+    height: 600px;
+}*/
 /*
 .react-slideshow-container .nav:first-of-type:hover {
     left: 20px;
@@ -236,6 +234,7 @@
 
 }
 
+
 /*.slide-box:hover:after {
     content: '';
     position: absolute;
@@ -339,11 +338,11 @@
 .arrow {
    /* margin: -33px 0 0;*/
     position: absolute;
-    top: 35%;
+    top: 50%;
     cursor: pointer;
     z-index: 3;
 
-    background: rgba(102, 102, 102, 0.5);
+    background: rgba(102, 102, 102, 0.2);
     height: 40px;
     width: 40px;
     border-radius: 50%;
@@ -356,12 +355,17 @@
 
 }
 
+.arrow:hover {
+    background: rgba(102, 102, 102, 0.5);
+}
+
 .prev {
     left: 10px;
 }
 
 .prev:hover .svg {
-    left: -5px;
+    /*left: -5px;*/
+
 }
 
 .next {
@@ -369,12 +373,12 @@
 }
 
 .next:hover .svg {
-    left: 5px;
+    /*left: 5px;*/
 }
 
 .svg {
     position: relative;
     left: 0;
     right: 0;
-    transition: left 0.2s ease;
+    /*   transition: left 0.2s ease;*/
 }

@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import {SectionTitle} from "components";
 import {Container} from "components/Container";
-import {SlideShow} from "layout/sections/works/slideShow/SlideShow";
 import img1 from "assets/img/Rectangle 14.jpg";
 import img2 from "assets/img/Rectangle 16.png";
+import {MyCarousel} from "layout/sections/works/carousel/carousel";
 
 const imagesWorks = [
   {
@@ -30,8 +30,11 @@ export const Works = () => {
     <StyledWorks>
 
       <Container>
-        <SectionTitle>My Works</SectionTitle>
-        <SlideShow images={imagesWorks}/>
+
+          <SectionTitle>My Works</SectionTitle>
+          <MyCarousel images={imagesWorks}/>
+
+
       </Container>
     </StyledWorks>
   );
@@ -40,3 +43,5 @@ export const Works = () => {
 const StyledWorks = styled.section`
   /*min-height: 100vh;*/
 `;
+
+
