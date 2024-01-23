@@ -20,8 +20,16 @@ const imagesWorks = [
     title: 'ToDoList3',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, aperiam beatae eius eos fugiat fugit hic illo nobis nostrum tempora!'
   }, {
-    img: img2,
+    img: img1,
     title: 'ToDoList4',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, aperiam beatae eius eos fugiat fugit hic illo nobis nostrum tempora!'
+  }, {
+    img: img1,
+    title: 'ToDoList5',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, aperiam beatae eius eos fugiat fugit hic illo nobis nostrum tempora!'
+  }, {
+    img: img1,
+    title: 'ToDoList6',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, aperiam beatae eius eos fugiat fugit hic illo nobis nostrum tempora!'
   }
 ];

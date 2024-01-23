@@ -13,33 +13,52 @@ type CarouselImgProps = {
 }
 export const CarouselImg = (props: CarouselImgProps) => {
 
+  const lengthArr = props.images.length
+
   const [currentSlide, setCurrentSlide] = useState(0);
   const handleSlideChange = (currentSlide: number) => {
     setCurrentSlide(currentSlide);
   };
 
-  const lengthArr = props.images.length
-
   const handleArrowClick = (direction: string) => {
+    if (direction === 'left') {
+      if (currentSlide === 0) {
+        setCurrentSlide(lengthArr-1);
+      } else {
+        setCurrentSlide(currentSlide - 1);
+      }
+
+    } else {
+      if (currentSlide === lengthArr-1) {
+        setCurrentSlide(0);
+      } else {
+        setCurrentSlide(currentSlide + 1);
+      }
+
+    }
+  }
+
+/*  const handleArrowClick = (direction: string) => {
     const newSlide = direction === 'left'
       ? (currentSlide === 0 ? lengthArr - 1 : currentSlide - 1)
       : (currentSlide === lengthArr - 1 ? 0 : currentSlide + 1);
 
     setCurrentSlide(newSlide);
-  };
+  };*/
 
   return (
     <CarouselProvider
-      naturalSlideWidth={1000}
-      naturalSlideHeight={800}
-      totalSlides={4}
-
-      interval={9000}
-      isPlaying={false}
-
-      dragEnabled={true}
-      infinite={true}
+      naturalSlideWidth={1}
+      naturalSlideHeight={1}
+      totalSlides={lengthArr}
       isIntrinsicHeight={true}
+
+     interval={9000}
+      isPlaying={true}
+
+      infinite={true}
+
+      lockOnWindowScroll={true}
 
     >
       <Slider className="slide-box">
@@ -56,7 +75,7 @@ export const CarouselImg = (props: CarouselImgProps) => {
             </div>
 
             <div className="dotBox">
-              {Array.from({length: props.images.length}).map((_, index) => (
+              {Array.from({length: lengthArr}).map((_, index) => (
                 <Dot onClick={() => handleSlideChange(index)}
                      className={currentSlide === index ? 'indicatorActive' : 'indicator'} key={index}
                      slide={index}/>
@@ -74,10 +93,10 @@ export const CarouselImg = (props: CarouselImgProps) => {
               </Description>
             </TextBox>
 
-
             <ButtonLink href="https://soundcloud.com/discover">
               <span>View Live</span>
             </ButtonLink>
+
             <ButtonLink href="https://soundcloud.com/discover">
               <span>Github Repo</span>
             </ButtonLink>
