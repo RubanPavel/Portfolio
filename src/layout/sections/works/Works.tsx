@@ -4,7 +4,7 @@ import {SectionTitle} from "components";
 import {Container} from "components/Container";
 import img1 from "assets/img/Rectangle 14.jpg";
 import img2 from "assets/img/Rectangle 16.png";
-import {MyCarousel} from "layout/sections/works/carousel/carousel";
+import {CarouselImg} from "layout/sections/works/carousel/Carousel";
 
 const imagesWorks = [
   {
@@ -28,13 +28,9 @@ const imagesWorks = [
 export const Works = () => {
   return (
     <StyledWorks>
-
       <Container>
-
           <SectionTitle>My Works</SectionTitle>
-          <MyCarousel images={imagesWorks}/>
-
-
+          <CarouselImg images={imagesWorks}/>
       </Container>
     </StyledWorks>
   );

@@ -44,6 +44,8 @@ export const GlobalStyled = createGlobalStyle`
     border: none;
     cursor:pointer;
   }
+  
+  
 
   section {
     padding: 100px 0;

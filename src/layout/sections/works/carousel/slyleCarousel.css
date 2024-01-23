@@ -1,0 +1,164 @@
+.buttonStyle {
+    width: 30px;
+    background: none;
+    border: 0
+}
+
+.backgroundImage {
+    object-fit: cover;
+    width: 100%
+}
+
+.indicator {
+    cursor: pointer;
+    text-align: center;
+    margin: 10px;
+    content: "";
+    height: 4px;
+    width: 40px;
+    background: #000;
+    transition: background 0.2s ease 0s;
+}
+
+.indicatorActive {
+    cursor: pointer;
+    text-align: center;
+    margin: 10px;
+    content: "";
+    height: 4px;
+    width: 40px;
+    background: rgba(102, 102, 102, 0.5);;
+    transition: background 0.2s ease 0s;
+}
+
+
+.indicator:active {
+    background: rgba(102, 102, 102, 0.5);;
+}
+
+/*.indicator.active::before {
+    background: rgba(102, 102, 102, 0.5);;
+
+}*/
+.indi {
+    margin: 10px;
+    background-color: unset;
+    width: 30px;
+    height: 10px;
+}
+
+
+.slide-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    color: #e1e1e1;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide-box {
+    position: relative;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+
+/*.slide-box:hover:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    backdrop-filter: blur(4px);
+    opacity: 1;
+}*/
+
+
+.title {
+    margin: 0 auto 15px;
+    max-width: 1000px;
+    font: 300 50px/1.2 "Oswald", sans-serif;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+}
+
+.text-inside {
+    margin: 0 auto;
+    max-width: 1000px;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.text-outside {
+    margin: -20px;
+    width: 100%;
+    /* margin: 0 auto;*/
+    max-width: 1000px;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.arrow {
+    /* margin: -33px 0 0;*/
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    z-index: 3;
+
+    background: rgba(102, 102, 102, 0.2);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.arrow:hover {
+    background: rgba(102, 102, 102, 0.5);
+}
+
+.prev {
+    left: 10px;
+}
+
+.prev:hover .svg {
+    /*left: -5px;*/
+
+}
+
+.next {
+    right: 10px;
+}
+
+.next:hover .svg {
+    /*left: 5px;*/
+}
+
+.svg {
+    position: relative;
+    left: 0;
+    right: 0;
+    /*   transition: left 0.2s ease;*/
+}
