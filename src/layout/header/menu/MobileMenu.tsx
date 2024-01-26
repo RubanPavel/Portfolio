@@ -36,6 +36,8 @@ export const MobileMenu = (props: menuProps) => {
 };
 
 const StyledMobileMenu = styled.nav<{ open: boolean }>`
+  overflow: hidden;
+  
   top: 0;
   left: 0;
   height: 100vh;
