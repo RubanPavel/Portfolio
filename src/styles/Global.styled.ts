@@ -4,6 +4,7 @@ import {theme} from "styles/Theme";
 export const GlobalStyled = createGlobalStyle`
 
   body {
+    overflow: hidden;
     margin: 0;
 
     font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
