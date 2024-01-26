@@ -23,13 +23,13 @@ export const CarouselImg = (props: CarouselImgProps) => {
   const handleArrowClick = (direction: string) => {
     if (direction === 'left') {
       if (currentSlide === 0) {
-        setCurrentSlide(lengthArr-1);
+        setCurrentSlide(lengthArr - 1);
       } else {
         setCurrentSlide(currentSlide - 1);
       }
 
     } else {
-      if (currentSlide === lengthArr-1) {
+      if (currentSlide === lengthArr - 1) {
         setCurrentSlide(0);
       } else {
         setCurrentSlide(currentSlide + 1);
@@ -38,13 +38,13 @@ export const CarouselImg = (props: CarouselImgProps) => {
     }
   }
 
-/*  const handleArrowClick = (direction: string) => {
-    const newSlide = direction === 'left'
-      ? (currentSlide === 0 ? lengthArr - 1 : currentSlide - 1)
-      : (currentSlide === lengthArr - 1 ? 0 : currentSlide + 1);
+  /*  const handleArrowClick = (direction: string) => {
+      const newSlide = direction === 'left'
+        ? (currentSlide === 0 ? lengthArr - 1 : currentSlide - 1)
+        : (currentSlide === lengthArr - 1 ? 0 : currentSlide + 1);
 
-    setCurrentSlide(newSlide);
-  };*/
+      setCurrentSlide(newSlide);
+    };*/
 
   return (
     <CarouselProvider
@@ -53,7 +53,7 @@ export const CarouselImg = (props: CarouselImgProps) => {
       totalSlides={lengthArr}
       isIntrinsicHeight={true}
 
-     interval={9000}
+      interval={9000}
       isPlaying={true}
 
       infinite={true}
