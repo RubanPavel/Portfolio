@@ -18,7 +18,7 @@ export const MobileMenu = (props: menuProps) => {
   useOnClickOutside(node, () => setOpen(false));
 
   return (
-    <div ref={node}>
+    <div style={{overflow:"hidden"}} ref={node}>
       <StyledMobileMenu open={open}>
         <ul>
           {props.menuArr.map((m, index) => {
@@ -36,7 +36,6 @@ export const MobileMenu = (props: menuProps) => {
 };
 
 const StyledMobileMenu = styled.nav<{ open: boolean }>`
-  overflow: hidden;
   
   top: 0;
   left: 0;
