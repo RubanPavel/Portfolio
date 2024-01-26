@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import {theme} from "styles/Theme";
+import {Icon} from "icon/Icon";
 
 type menuProps = {
   menuArr: Array<{ href: string; title: string }>;
@@ -8,17 +9,21 @@ type menuProps = {
 
 export const Menu = (props: menuProps) => {
   return (
-    <StyledMenu>
-      <ul>
-        {props.menuArr.map((m, index) => {
-          return (
-            <ListItem key={index}>
-              <Link href={m.href}>{m.title}</Link>
-            </ListItem>
-          );
-        })}
-      </ul>
-    </StyledMenu>
+    <>
+      <StyledMenu>
+        <ul>
+          {props.menuArr.map((m, index) => {
+            return (
+              <ListItem key={index}>
+                <Link href={m.href}>{m.title}</Link>
+              </ListItem>
+            );
+          })}
+        </ul>
+        <Icon iconId={'menuBottom'} width={"950"} height={"2"} viewBox={"0 0 950 2"}/>
+      </StyledMenu>
+
+    </>
   );
 };
 
