@@ -21,7 +21,7 @@ export const Header = () => {
       <Container>
         <FlexWrapper align={'center'} justify={'space-between'} direction={"column"}>
           <Menu menuArr={menuArr}/>
-          <MobileMenu menuArr={menuArr}/>
+          <MobileMenu  menuArr={menuArr}/>
         </FlexWrapper>
       </Container>
     </StyledHeader>

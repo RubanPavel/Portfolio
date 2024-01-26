@@ -4,6 +4,7 @@ import {theme} from "styles/Theme";
 export const GlobalStyled = createGlobalStyle`
 
   body {
+    
     margin: 0;
 
     font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -13,6 +14,13 @@ export const GlobalStyled = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
     color: ${theme.colors.font};
     line-height: 1.2;
+
+   
+    
+  }
+  
+  body.scroll-blocked {
+    overflow: hidden;
   }
 
   *,
@@ -58,5 +66,7 @@ export const GlobalStyled = createGlobalStyle`
   section:nth-of-type(even) {
     background-color: ${theme.colors.secondaryBg};
   }
+  
+  
 
 `

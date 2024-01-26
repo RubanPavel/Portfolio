@@ -2,6 +2,7 @@ import {Icon} from "icon/Icon";
 import React from "react";
 import styled from "styled-components";
 import {FlexWrapper} from "components";
+import {theme} from "styles/Theme";
 
 
 type propsSkill = {
@@ -23,9 +24,16 @@ export const Skill = (props: propsSkill) => {
     </StyledSkill>
   );
 };
+
 const StyledSkill = styled.div`
-  width: 33%;
-  padding: 50px 30px;
+  //width: 33%;
+  padding: 40px 15px;
+
+  @media ${theme.media.tablet} {
+    svg {
+      transform: scale(.8);
+    }
+  }
 `;
 
 const SkillTitle = styled.h3`

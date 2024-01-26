@@ -2,7 +2,7 @@ import {useOnClickOutside} from "hooks";
 import React, {useRef, useState} from "react";
 import styled from "styled-components";
 import {theme} from "styles/Theme";
-import { Hamburger } from "./Hamburger";
+import {Hamburger} from "./Hamburger";
 
 type menuProps = {
   menuArr: Array<{ href: string; title: string }>;
@@ -10,15 +10,25 @@ type menuProps = {
 
 
 export const MobileMenu = (props: menuProps) => {
-
   const [open, setOpen] = useState<boolean>(false);
   const node = useRef<HTMLDivElement>(null);
-  const close = () => setOpen(false);
+  const close = () => {
+    setOpen(false);
+    document.body.classList.remove("scroll-blocked"); // Удаление класса при закрытии
+  };
 
-  useOnClickOutside(node, () => setOpen(false));
+  useOnClickOutside(node, close);
+  const toggleMenu = () => {
+    setOpen(!open);
+    if (!open) {
+      document.body.classList.add("scroll-blocked"); // Добавление класса при открытии
+    } else {
+      document.body.classList.remove("scroll-blocked"); // Удаление класса при закрытии
+    }
+  };
 
   return (
-    <div style={{overflow:"hidden"}} ref={node}>
+    <div ref={node}>
       <StyledMobileMenu open={open}>
         <ul>
           {props.menuArr.map((m, index) => {
@@ -30,19 +40,21 @@ export const MobileMenu = (props: menuProps) => {
           })}
         </ul>
       </StyledMobileMenu>
-      <Hamburger open={open} setOpen={setOpen} />
+      <Hamburger open={open} setOpen={toggleMenu}/>
     </div>
   );
 };
 
 const StyledMobileMenu = styled.nav<{ open: boolean }>`
-  
   top: 0;
   left: 0;
-  height: 100vh;
-  width: 35vw;
+  height: 100%;
   position: fixed;
-  background-color: ${theme.colors.secondaryBg};
+    /*background-color: ${theme.colors.secondaryBg};*/
+
+  background-color: red;
+  opacity: 0.7;
+
   z-index: 1;
 
   display: flex;
@@ -54,7 +66,6 @@ const StyledMobileMenu = styled.nav<{ open: boolean }>`
 
   @media ${theme.media.tablet} {
     width: 100%;
-  
   }
 
   @media ${theme.media.tabletMin} {
