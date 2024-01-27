@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {useTranslation} from 'react-i18next';
 import styled from "styled-components";
+import {theme} from "styles/Theme";
 
 export const LanguageSwitch = () => {
   const {i18n} = useTranslation();
@@ -31,6 +32,10 @@ const LangBox = styled.div`
   width: 65px;
   font-size: 16px;
   font-weight: 500;
+
+  @media ${theme.media.tablet}{
+    padding-top: 10px;
+  }
   
   /* transform: rotate(-90deg);*/
   /*position: fixed;
