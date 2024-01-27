@@ -54,8 +54,8 @@ export const Footer = () => {
           <SocialList>
             {footerData.map((f, index) => {
               return (
-                <SocialItem>
-                  <SocialLink target="_blank" href={f.href} key={index}>
+                <SocialItem key={index}>
+                  <SocialLink target="_blank" href={f.href}>
                     <Icon {...f} iconId={f.iconId}/>
                   </SocialLink>
                 </SocialItem>

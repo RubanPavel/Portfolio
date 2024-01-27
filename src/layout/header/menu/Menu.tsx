@@ -20,27 +20,36 @@ export const Menu = (props: menuProps) => {
             );
           })}
         </ul>
-        <Icon iconId={'menuBottom'} width={"950"} height={"2"} viewBox={"0 0 950 2"}/>
       </StyledMenu>
-
+      <StyledBox>
+      <Icon iconId={'menuBottom'} width={"950"} height={"2"} viewBox={"0 0 950 2"}/>
+      </StyledBox>
     </>
+
   );
 };
 
 const StyledMenu = styled.nav`
   width: 100%;
-
-  ul {
+  
+   ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
 
   @media ${theme.media.tablet} {
-  display: none;
+    display: none;
   }
 
+
 `;
+
+const StyledBox = styled.div`
+  @media ${theme.media.tablet} {
+    display: none;
+  }
+`
 
 
 const ListItem = styled.li`

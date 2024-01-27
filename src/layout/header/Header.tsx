@@ -20,8 +20,8 @@ export const Header = () => {
     <StyledHeader>
       <Container>
         <FlexWrapper align={'center'} justify={'space-between'} direction={"column"}>
-          <Menu menuArr={menuArr}/>
-          <MobileMenu  menuArr={menuArr}/>
+            <Menu menuArr={menuArr}/>
+          <MobileMenu menuArr={menuArr}/>
         </FlexWrapper>
       </Container>
     </StyledHeader>
@@ -37,7 +37,8 @@ const StyledHeader = styled.header`
   z-index: 1000;
   background-color: ${theme.colors.primaryBg};
 
-  @media ${theme.media.tablet}{
+
+  @media ${theme.media.tablet} {
     padding: 40px 0;
   }
 `;
