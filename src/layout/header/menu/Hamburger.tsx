@@ -18,10 +18,10 @@ export const Hamburger = (props: Props) => (
 
 const StyledHamburger = styled.button<{ open: boolean }>`
   position: fixed;
-  right: 3vh;
-  top: 5vw;
-  width: 3rem;
-  height: 2rem;
+  right: 15px;
+  top: 15px;
+  width: 40px;
+  height: 32px;
   padding: 0;
   background: transparent;
 
@@ -37,31 +37,28 @@ const StyledHamburger = styled.button<{ open: boolean }>`
   @media ${theme.media.tabletMin} {
     display: none;
   }
-
  
-
   div {
-
     position: relative;
-    width: 2rem;
-    height: 0.25rem;
+    width: 31.5px;
+    height: 3px;
     border-radius: 10px;
     transition: all 0.3s linear;
     transform-origin: 1px;
     background-color: ${theme.colors.font};
 
-  :first-child {
-    transform: ${({open}) => (open ? "rotate(45deg)" : "rotate(0)")};
-  }
+    :first-child {
+      transform: ${({open}) => (open ? "rotate(45deg)" : "rotate(0)")};
+    }
 
-  :nth-child(2) {
-    opacity: ${({open}) => (open ? "0" : "1")};
-    transform: ${({open}) => (open ? "translateX(20px)" : "translateX(0)")};
-  }
+    :nth-child(2) {
+      opacity: ${({open}) => (open ? "0" : "1")};
+      transform: ${({open}) => (open ? "translateX(20px)" : "translateX(0)")};
+    }
 
-  :nth-child(3) {
-    transform: ${({open}) => (open ? "rotate(-45deg)" : "rotate(0)")};
+    :nth-child(3) {
+      transform: ${({open}) => (open ? "rotate(-45deg)" : "rotate(0)")};
+    }
   }
-}
 `;
 

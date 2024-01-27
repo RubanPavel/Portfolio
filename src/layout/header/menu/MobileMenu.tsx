@@ -1,5 +1,5 @@
 import {useOnClickOutside} from "hooks";
-import React, {useRef, useState} from "react";
+import React, {useEffect, useRef, useState} from "react";
 import styled from "styled-components";
 import {theme} from "styles/Theme";
 import {Hamburger} from "./Hamburger";
@@ -27,8 +27,37 @@ export const MobileMenu = (props: menuProps) => {
     }
   };
 
+  const [show, setShow] = useState(true); // Initialize as true to show the navbar initially
+  const [lastScrollY, setLastScrollY] = useState(0);
+  console.log(show)
+
+  const controlNavbar = () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY) {
+      // If scrolling down, hide the navbar
+      setShow(false);
+    } else {
+      // If scrolling up, show the navbar
+      setShow(true);
+    }
+
+    // Update the last scroll position
+    setLastScrollY(currentScrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', controlNavbar);
+
+    // Cleanup the event listener
+    return () => {
+      window.removeEventListener('scroll', controlNavbar);
+    };
+  }, [lastScrollY]);
+
+
   return (
-    <div ref={node}>
+    <Menu ref={node} show={show}>
       <StyledMobileMenu open={open}>
         <ul>
           {props.menuArr.map((m, index) => {
@@ -41,25 +70,39 @@ export const MobileMenu = (props: menuProps) => {
         </ul>
       </StyledMobileMenu>
       <Hamburger open={open} setOpen={toggleMenu}/>
-    </div>
+    </Menu>
   );
 };
+
+const Menu = styled.nav<{ show: boolean }>`
+  display: ${(props) => (props.show ? "block" : "none")};
+  background: ${theme.colors.secondaryBg};
+  height: 60px;
+
+  width: 100vw;
+  border-bottom: 1px solid black;
+
+
+  @media ${theme.media.tabletMin} {
+    display: none;
+    height: 0;
+  }
+`;
 
 const StyledMobileMenu = styled.nav<{ open: boolean }>`
   top: 0;
   left: 0;
   height: 100%;
+  width: 100%;
   position: fixed;
-    /*background-color: ${theme.colors.secondaryBg};*/
-
-  background-color: red;
-  opacity: 0.7;
-
+  background-color: ${theme.colors.secondaryBg};
+  opacity: 0.9;
   z-index: 1;
 
   display: flex;
   flex-direction: column;
-  padding: 10rem 0;
+  justify-content: center;
+ 
 
   transition: transform 0.3s ease-in-out;
   transform: ${({open}) => (open ? "translateX(0)" : "translateX(-100%)")};
@@ -74,18 +117,15 @@ const StyledMobileMenu = styled.nav<{ open: boolean }>`
 `;
 
 const ListItem = styled.li`
-  color: ${theme.colors.font};
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
+  
 
 `
 const Link = styled.a`
-  padding: 0 2rem;
-  font-size: 2rem;
+  font-size: 30px;
   color: ${theme.colors.font};
-  text-decoration: none;
+  color: ${theme.colors.font};
+  font-weight: 500;
+  line-height: 1.5;
 
   :hover {
     color: ${theme.colors.font};
