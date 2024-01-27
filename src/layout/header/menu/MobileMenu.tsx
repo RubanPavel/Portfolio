@@ -10,27 +10,27 @@ type menuProps = {
 
 
 export const MobileMenu = (props: menuProps) => {
+
   const [open, setOpen] = useState<boolean>(false);
   const node = useRef<HTMLDivElement>(null);
+
+  const [show, setShow] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
   const close = () => {
     setOpen(false);
-    document.body.classList.remove("scroll-blocked"); // Удаление класса при закрытии
+    document.body.classList.remove("scroll-blocked");
   };
 
   useOnClickOutside(node, close);
   const toggleMenu = () => {
     setOpen(!open);
     if (!open) {
-      document.body.classList.add("scroll-blocked"); // Добавление класса при открытии
+      document.body.classList.add("scroll-blocked");
     } else {
-      document.body.classList.remove("scroll-blocked"); // Удаление класса при закрытии
+      document.body.classList.remove("scroll-blocked");
     }
   };
-
-  const [show, setShow] = useState(true); // Initialize as true to show the navbar initially
-  const [lastScrollY, setLastScrollY] = useState(0);
-  console.log(show)
-
   const controlNavbar = () => {
     const currentScrollY = window.scrollY;
 
@@ -54,7 +54,6 @@ export const MobileMenu = (props: menuProps) => {
       window.removeEventListener('scroll', controlNavbar);
     };
   }, [lastScrollY]);
-
 
   return (
     <Menu ref={node} show={show}>
@@ -102,7 +101,6 @@ const StyledMobileMenu = styled.nav<{ open: boolean }>`
   display: flex;
   flex-direction: column;
   justify-content: center;
- 
 
   transition: transform 0.3s ease-in-out;
   transform: ${({open}) => (open ? "translateX(0)" : "translateX(-100%)")};
@@ -117,12 +115,11 @@ const StyledMobileMenu = styled.nav<{ open: boolean }>`
 `;
 
 const ListItem = styled.li`
-  
+
 
 `
 const Link = styled.a`
   font-size: 30px;
-  color: ${theme.colors.font};
   color: ${theme.colors.font};
   font-weight: 500;
   line-height: 1.5;
