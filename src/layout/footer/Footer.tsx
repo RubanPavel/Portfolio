@@ -73,6 +73,7 @@ export const Footer = () => {
 const StyledFooter = styled.footer`
   background-color: ${theme.colors.secondaryBg};
   padding: 40px 0;
+  
 `
 const Name = styled.span`
   text-align: center;
@@ -84,6 +85,13 @@ const Name = styled.span`
 const SocialList = styled.ul`
   display: flex;
   gap: 30px;
+  
+  @media ${theme.media.mobile} {
+    svg{
+      transform: scale(.8);
+    }
+    gap: 10px;
+  }
 `
 const SocialItem = styled.li`
   display: flex;
@@ -93,10 +101,8 @@ const SocialItem = styled.li`
 `
 const SocialLink = styled.a`
   display: flex;
-  
   justify-content: center;
   align-items: center;
- /* background-color: #666666;*/
   border-radius: 5%;
   height: 70px;
   width: 70px;
@@ -105,6 +111,8 @@ const SocialLink = styled.a`
     transform: translateY(-4px);
     color: black;
   }
+
+  
 
 `
 const Copyright = styled.small`

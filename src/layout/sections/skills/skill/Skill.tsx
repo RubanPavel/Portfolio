@@ -30,17 +30,32 @@ const StyledSkill = styled.div`
   padding: 40px 15px;
 
   @media ${theme.media.tablet} {
+    width: 33%;
     svg {
       transform: scale(.8);
     }
   }
+
+  @media ${theme.media.mobile} {
+    width: 50%;
+    transform: scale(.9);
+    padding: 10px 5px;
+  }
 `;
 
 const SkillTitle = styled.h3`
-  padding: 20px 0 40px 0;
+  padding: 20px 0 20px 0;
   text-align: center;
   color: #828282;
   font-size: 14px;
   font-weight: 400;
+
+  @media ${theme.media.tablet} {
+    padding: 15px 0 15px 0;
+  }
+
+  @media ${theme.media.mobile} {
+    padding: 15px 0 15px 0;
+  }
 `;
 
