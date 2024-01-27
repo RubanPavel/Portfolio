@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
-import {CarouselProvider, Dot, Slide, Slider} from 'pure-react-carousel';
+import {CarouselProvider, Dot, Slide, Slider, } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import 'layout/sections/works/carousel/slyleCarousel.css'
 import styled from "styled-components";
 import {theme} from "styles/Theme";
-import {ArrowBack} from "layout/sections/works/carousel/Arrow/ArrowBack";
-import {ArrowNext} from "layout/sections/works/carousel/Arrow/ArrowNest.";
+import {ArrowBack, ArrowNext} from "layout/sections/works/carousel/Arrow";
+
 
 type CarouselImgProps = {
   images: Array<{ img: string, title: string, description: string }>
@@ -46,6 +46,7 @@ export const CarouselImg = (props: CarouselImgProps) => {
       setCurrentSlide(newSlide);
     };*/
 
+  // @ts-ignore
   return (
     <CarouselProvider
       naturalSlideWidth={1}
@@ -66,40 +67,36 @@ export const CarouselImg = (props: CarouselImgProps) => {
         {props.images.map((i, index) => (
 
           <Slide className="slide" key={index} index={index}>
-            <div style={{position: 'relative'}}>
-              <img className={'backgroundImage'} src={i.img} alt=""/>
 
+            <Box>
+              <Img src={i.img} />
               <ArrowBack direction="left" onClick={handleArrowClick}/>
               <ArrowNext direction="right" onClick={handleArrowClick}/>
+            </Box>
 
-            </div>
+
+
+
 
             <div className="dotBox">
               {Array.from({length: lengthArr}).map((_, index) => (
                 <Dot onClick={() => handleSlideChange(index)}
-                     className={currentSlide === index ? 'indicatorActive' : 'indicator'} key={index}
-                     slide={index}/>
-
-
+                     className={currentSlide === index ? 'indicatorActive' : 'indicator'} key={index} slide={index}/>
               ))}
             </div>
 
             <TextBox>
-              <Title>
-                {i.title}
-              </Title>
-              <Description>
-                {i.description}
-              </Description>
+
+              <Title>{i.title}</Title>
+              <Description>{i.description}</Description>
+
+
+              <BoxButton>
+                <ButtonLink href="https://soundcloud.com/discover"><span>View Live</span></ButtonLink>
+                <ButtonLink href="https://soundcloud.com/discover"><span>Github Repo</span></ButtonLink>
+              </BoxButton>
+
             </TextBox>
-
-            <ButtonLink href="https://soundcloud.com/discover">
-              <span>View Live</span>
-            </ButtonLink>
-
-            <ButtonLink href="https://soundcloud.com/discover">
-              <span>Github Repo</span>
-            </ButtonLink>
 
           </Slide>
         ))}
@@ -119,12 +116,31 @@ const Description = styled.h3`
   color: #373737;
   font-size: 16px;
   font-weight: 400;
+  
 
 `
 const TextBox = styled.div`
   margin-bottom: 20px;
-  text-align: center;
 `
+
+const Box = styled.div`
+  position: relative;
+`
+const BoxButton = styled.div`
+  display: inline-block;
+`
+
+const Img = styled.img`
+  object-fit: contain;
+  width: 100%;
+  
+
+
+ /*   @media screen and (max-width: 1000px) {
+      transform: scale(0.8);
+    }*/
+`
+
 
 const ButtonLink = styled.a`
   margin: 0 10px;

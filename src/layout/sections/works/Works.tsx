@@ -37,8 +37,8 @@ export const Works = () => {
   return (
     <StyledWorks>
       <Container>
-          <SectionTitle>My Works</SectionTitle>
-          <CarouselImg images={imagesWorks}/>
+        <SectionTitle>My Works</SectionTitle>
+        <CarouselImg images={imagesWorks}/>
       </Container>
     </StyledWorks>
   );
@@ -48,4 +48,8 @@ const StyledWorks = styled.section`
   /*min-height: 100vh;*/
 `;
 
+/*const WorksBox = styled.div`
+  margin: 0 auto;
+  width: 100%;
+`;*/
 

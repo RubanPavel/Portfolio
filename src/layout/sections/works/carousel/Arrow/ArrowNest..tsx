@@ -1,6 +1,6 @@
 import React from 'react';
 import { ButtonNext} from "pure-react-carousel";
-import 'layout/sections/works/slideShow/slylesSlider.css'
+import 'layout/sections/works/carousel/slyleCarousel.css'
 
 type ArrowNextProps = {
   direction: 'right';
@@ -20,3 +20,5 @@ export const ArrowNext = ({direction, onClick}:ArrowNextProps) => {
       </ButtonNext>
   );
 };
+
+

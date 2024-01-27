@@ -3,11 +3,12 @@
     background: none;
     border: 0
 }
-
-.backgroundImage {
-    object-fit: cover;
-    width: 100%
+.img{
+    object-fit: contain;
+    width: 100%;
+    height: 500px;
 }
+
 
 .indicator {
     cursor: pointer;
@@ -36,17 +37,6 @@
 
 .indicator:active {
     background: rgba(102, 102, 102, 0.5);;
-}
-
-/*.indicator.active::before {
-    background: rgba(102, 102, 102, 0.5);;
-
-}*/
-.indi {
-    margin: 10px;
-    background-color: unset;
-    width: 30px;
-    height: 10px;
 }
 
 
@@ -78,22 +68,11 @@
     display: flex;
     text-align: center;
     flex-direction: column;
+    justify-content: center;
+
 }
 
-
-/*.slide-box:hover:after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    backdrop-filter: blur(4px);
-    opacity: 1;
-}*/
-
-
-.title {
+/*.title {
     margin: 0 auto 15px;
     max-width: 1000px;
     font: 300 50px/1.2 "Oswald", sans-serif;
@@ -106,7 +85,7 @@
     max-width: 1000px;
     font-size: 18px;
     line-height: 1.4;
-}
+}*/
 
 .text-outside {
     margin: -20px;
@@ -118,9 +97,8 @@
 }
 
 .arrow {
-    /* margin: -33px 0 0;*/
     position: absolute;
-    top: 50%;
+    top: 45%;
     cursor: pointer;
     z-index: 3;
 
@@ -129,11 +107,12 @@
     width: 40px;
     border-radius: 50%;
 
-
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+
+
 
 }
 
@@ -141,22 +120,21 @@
     background: rgba(102, 102, 102, 0.5);
 }
 
-.prev {
+.back {
     left: 10px;
+
+    /*@media screen and (max-width: 768px) {
+        left: 110px;
+    }*/
 }
 
-.prev:hover .svg {
-    /*left: -5px;*/
 
-}
 
 .next {
     right: 10px;
 }
 
-.next:hover .svg {
-    /*left: 5px;*/
-}
+
 
 .svg {
     position: relative;

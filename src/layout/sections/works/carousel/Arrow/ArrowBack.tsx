@@ -1,6 +1,6 @@
 import React from 'react';
 import {ButtonBack} from "pure-react-carousel";
-import 'layout/sections/works/slideShow/slylesSlider.css'
+import 'layout/sections/works/carousel/slyleCarousel.css'
 
 type ArrowBackProps = {
   direction: 'left' ;
@@ -9,7 +9,7 @@ type ArrowBackProps = {
 
 export const ArrowBack = ({direction, onClick}:ArrowBackProps) => {
   return (
-      <ButtonBack onClick={() => onClick(direction)} className="arrow prev">
+      <ButtonBack onClick={() => onClick(direction)} className="arrow back">
               <span className="svg">
               <svg fill="black" version="1.1" id="svg4-Layer_1" xmlns="http://www.w3.org/2000/svg"
                    xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14px" height="26px"
