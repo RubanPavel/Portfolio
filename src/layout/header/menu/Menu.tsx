@@ -64,7 +64,7 @@ const ListItem = styled.li`
 `
 const LinkMenu = styled(Link)`
   color: #828282;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
   &.active{
     color: ${theme.colors.font};
