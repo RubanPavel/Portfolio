@@ -8,7 +8,7 @@ import {theme} from "styles/Theme";
 
 export const Contact = () => {
   return (
-    <StyledContact>
+    <StyledContact id={'contacts'}>
       <Container>
         <SectionTitle>Contact</SectionTitle>
         <ContactText>Want to know more or just chat? <br /> You are welcome!</ContactText>

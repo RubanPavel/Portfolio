@@ -35,7 +35,7 @@ const imagesWorks = [
 ];
 export const Works = () => {
   return (
-    <StyledWorks>
+    <StyledWorks id={'works'}>
       <Container>
         <SectionTitle>My Works</SectionTitle>
         <CarouselImg images={imagesWorks}/>

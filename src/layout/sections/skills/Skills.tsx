@@ -21,7 +21,7 @@ const skillsArr = [
 
 export const Skills = () => {
   return (
-    <StyledSkills>
+    <StyledSkills id={"skills"}>
       <Container>
         <SectionTitle>My skills</SectionTitle>
         <SectionText>I work in such programs as</SectionText>

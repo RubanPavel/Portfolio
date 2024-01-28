@@ -5,16 +5,26 @@ import styled from "styled-components";
 import {useTranslation} from "react-i18next";
 import {LanguageSwitch} from "layout/sections/main/button/LanguageSwitch";
 import {theme} from "styles/Theme";
+import Typewriter from 'typewriter-effect';
 
 
 export const Main = () => {
   const {t} = useTranslation();
   return (
-    <StyledMain>
+    <StyledMain id={'home'}>
       <Container>
           <MainWrapper>
             <Name>{t('nameMane')}</Name>
-            <Title> {t('titleMainF')} <br/> {t('titleMainT')}  </Title>
+            <Title>
+              <Typewriter
+                options={{
+                  strings: [`${t('titleMainF')}<br/>${t('titleMainT')}`],
+                  autoStart: true,
+                  loop: true
+                }}
+              />
+
+            </Title>
             <LanguageSwitch/>
           </MainWrapper>
         <Photo src={imgMy} alt=""/>

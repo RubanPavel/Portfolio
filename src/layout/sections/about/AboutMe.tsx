@@ -7,7 +7,7 @@ import {Container} from "components/Container";
 
 export const AboutMe = () => {
   return (
-    <StyledAboutMe>
+    <StyledAboutMe id={"aboutMe"}>
       <Container>
         <SectionTitle>About Me</SectionTitle>
         <FlexWrapper direction={"column"} align={"center"} >

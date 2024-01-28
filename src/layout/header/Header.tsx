@@ -7,11 +7,11 @@ import {theme} from "styles/Theme";
 import {MobileMenu} from "layout/header/menu/MobileMenu";
 
 const menuArr = [
-  {href: "https://www.onliner.by/", title: "Home"},
-  {href: "https://www.onliner.by/", title: "About me"},
-  {href: "https://www.onliner.by/", title: "Skills"},
-  {href: "https://www.onliner.by/", title: "Works"},
-  {href: "https://www.onliner.by/", title: "Contacts"}
+  {href: "home", title: "Home"},
+  {href: "aboutMe", title: "About me"},
+  {href: "skills", title: "Skills"},
+  {href: "works", title: "Works"},
+  {href: "contacts", title: "Contacts"}
 ];
 
 

@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import {theme} from "styles/Theme";
 import {Icon} from "icon/Icon";
+import {Link} from "react-scroll";
 
 type menuProps = {
   menuArr: Array<{ href: string; title: string }>;
@@ -15,14 +16,19 @@ export const Menu = (props: menuProps) => {
           {props.menuArr.map((m, index) => {
             return (
               <ListItem key={index}>
-                <Link href={m.href}>{m.title}</Link>
+                <LinkMenu
+                  activeClass="active"
+                  spy={true}
+                  smooth={true}
+                  to={m.href}>{m.title}
+                </LinkMenu>
               </ListItem>
             );
           })}
         </ul>
       </StyledMenu>
       <StyledBox>
-      <Icon iconId={'menuBottom'} width={"950"} height={"2"} viewBox={"0 0 950 2"}/>
+        <Icon iconId={'menuBottom'} width={"950"} height={"2"} viewBox={"0 0 950 2"}/>
       </StyledBox>
     </>
 
@@ -31,8 +37,8 @@ export const Menu = (props: menuProps) => {
 
 const StyledMenu = styled.nav`
   width: 100%;
-  
-   ul {
+
+  ul {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -53,11 +59,15 @@ const StyledBox = styled.div`
 
 
 const ListItem = styled.li`
-  color: ${theme.colors.font};
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
+  
 
 `
-const Link = styled.a``
+const LinkMenu = styled(Link)`
+  color: #828282;
+  font-size: 18px;
+  font-weight: 500;
+  &.active{
+    color: ${theme.colors.font};
+  }
+
+`
