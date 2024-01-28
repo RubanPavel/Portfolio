@@ -74,14 +74,12 @@ export const MobileMenu = (props: menuProps) => {
 };
 
 const Menu = styled.nav<{ show: boolean }>`
-  display: ${(props) => (props.show ? "block" : "none")};
-  background: ${theme.colors.secondaryBg};
-  height: 60px;
-
+  opacity: ${(props) => (props.show ? 1 : 0)};
+  visibility: ${(props) => (props.show ? "visible" : "hidden")};
+  height: ${(props) => (props.show ? "60px" : "0")};
   width: 100vw;
-  border-bottom: 1px solid black;
-
-
+  box-shadow: 0 5px 5px -2px gray;
+  transition: opacity 0.3s ease, visibility 0.3s ease, height 0.3s ease;
   @media ${theme.media.tabletMin} {
     display: none;
     height: 0;
@@ -94,7 +92,7 @@ const StyledMobileMenu = styled.nav<{ open: boolean }>`
   height: 100%;
   width: 100%;
   position: fixed;
-  background-color: ${theme.colors.secondaryBg};
+  background-color: ${theme.colors.primaryBg};
   opacity: 0.9;
   z-index: 1;
 
