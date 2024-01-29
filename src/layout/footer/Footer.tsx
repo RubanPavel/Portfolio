@@ -4,6 +4,8 @@ import {Icon} from "icon/Icon";
 import {FlexWrapper} from 'components/FlexWrapper';
 import {Container} from 'components/Container';
 import {theme} from "styles/Theme";
+import Typewriter from "typewriter-effect";
+import {t} from "i18next";
 
 
 const footerData = [
@@ -50,7 +52,15 @@ export const Footer = () => {
     <StyledFooter>
       <Container>
         <FlexWrapper direction={'column'} align={'center'}>
-          <Name>{'{../Pavel_Ruban/*}'}</Name>
+          <Name>
+          <Typewriter
+              options={{
+                strings: [t('nameFooter')],
+                autoStart: true,
+                loop: true
+              }}
+          />
+        </Name>
           <SocialList>
             {footerData.map((f, index) => {
               return (

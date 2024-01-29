@@ -75,14 +75,16 @@ const Button = styled.button`
   font-size: 18px;
   font-weight: 400;
   margin-top: 20px;
+  transition: 0.5s;
 
   &:hover {
-    transform: translateY(-1px);
+    transform: scale(1.025);
     animation: ease;
+    opacity: 0.8;
   }
 
   &:active {
     background: black;
-    opacity: 0.8;
+    opacity: 0.5;
   }
 `;
