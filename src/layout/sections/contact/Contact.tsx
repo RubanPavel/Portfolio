@@ -1,30 +1,47 @@
-
 import {SectionTitle} from "components/SectionTitle";
-import React from "react";
+import React, {ElementRef, useRef} from "react";
 import styled from "styled-components";
 import {Container} from "components/Container";
 import {theme} from "styles/Theme";
-
+import emailjs from '@emailjs/browser';
 
 export const Contact = () => {
-  return (
-    <StyledContact id={'contacts'}>
-      <Container>
-        <SectionTitle>Contact</SectionTitle>
-        <ContactText>Want to know more or just chat? <br /> You are welcome!</ContactText>
-        <FormContact>
-          <Field placeholder={"Name:"}/>
-          <Field placeholder={"Email:"}/>
-          <Field placeholder={"Message:"} as={"textarea"}/>
-          <Button type={"submit"}>Send message</Button>
-        </FormContact>
-      </Container>
-    </StyledContact>
-  );
+
+    const form = useRef<ElementRef<'form'>>(null);
+
+    const sendEmail = (e: any) => {
+        e.preventDefault();
+
+        if (!form.current) return
+
+        emailjs.sendForm('service_mxj8r2j', 'template_1zy61ok', form.current, 'IfZzPryCO8Lhxecfa')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+        e.target.reset()
+    };
+    return (
+        <form ref={form} onSubmit={sendEmail}>
+            <StyledContact id={'contacts'}>
+                <Container>
+                    <SectionTitle>Contact</SectionTitle>
+                    <ContactText>Want to know more or just chat? <br/> You are welcome!</ContactText>
+                    <FormContact>
+                        <Field required name="name" placeholder={"Name:"}/>
+                        <Field required name="email" placeholder={"Email:"}/>
+                        <Field required name="message"  placeholder={"Message:"} as={"textarea"}/>
+                        <Button type={"submit"}>Send message</Button>
+                    </FormContact>
+                </Container>
+            </StyledContact>
+        </form>
+    );
 };
 
 const StyledContact = styled.section`
-  
+
 `;
 const FormContact = styled.div`
   max-width: 550px;
@@ -34,8 +51,8 @@ const FormContact = styled.div`
   align-items: center;
   gap: 15px;
   margin: 0 auto;
-  
-  textarea{
+
+  textarea {
     resize: none;
     height: 150px;
   }
@@ -50,10 +67,10 @@ const Field = styled.input`
   font-weight: 400;
   letter-spacing: 0.05em;
   color: ${theme.colors.font};
-  
-  &::placeholder{
+
+  &::placeholder {
     color: #666666;
-    
+
   }
 `;
 const ContactText = styled.h2`
