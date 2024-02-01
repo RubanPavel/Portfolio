@@ -5,32 +5,33 @@ import {Container} from "components/Container";
 import {FlexWrapper} from "components";
 import {theme} from "styles/Theme";
 import {MobileMenu} from "layout/header/menu/MobileMenu";
-
-const menuArr = [
-  {href: "home", title: "Home"},
-  {href: "aboutMe", title: "About me"},
-  {href: "skills", title: "Skills"},
-  {href: "works", title: "Works"},
-  {href: "contacts", title: "Contacts"}
-];
+import {useTranslation} from "react-i18next";
 
 
 export const Header = () => {
-  return (
-    <StyledHeader>
-      <Container>
-        <FlexWrapper align={'center'} justify={'space-between'} direction={"column"}>
-          <Menu menuArr={menuArr}/>
-          <MobileMenu menuArr={menuArr}/>
-        </FlexWrapper>
-      </Container>
-    </StyledHeader>
-  );
+    const {t} = useTranslation();
+    const menuArr = [
+        {href: "home", title: t('menuHome')},
+        {href: "aboutMe", title: t('menuAbout')},
+        {href: "skills", title: t('menuSkills')},
+        {href: "works", title: t('menuWorks')},
+        {href: "contacts", title: t('menuContacts')}
+    ];
+    return (
+        <StyledHeader>
+            <Container>
+                <FlexWrapper align={'center'} justify={'space-between'} direction={"column"}>
+                    <Menu menuArr={menuArr}/>
+                    <MobileMenu menuArr={menuArr}/>
+                </FlexWrapper>
+            </Container>
+        </StyledHeader>
+    );
 };
 
 const StyledHeader = styled.header`
   padding-top: 20px;
- /* height: 80px;*/
+  /* height: 80px;*/
   position: fixed;
   top: 0;
   left: 0;

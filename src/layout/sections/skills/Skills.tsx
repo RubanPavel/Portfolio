@@ -4,6 +4,7 @@ import {FlexWrapper, SectionTitle} from "components";
 import {Skill} from "./skill";
 import {Container} from "components/Container";
 import {Fade} from "react-awesome-reveal";
+import {useTranslation} from "react-i18next";
 
 const skillsArr = [
     {title: "Javascript", iconId: "JS_Logo", width: '100', height: '100', viewBox: '-1 -4 120 130', grade: 'grade'},
@@ -21,10 +22,11 @@ const skillsArr = [
 ];
 
 export const Skills = () => {
+    const {t} = useTranslation();
     return (
         <StyledSkills id={"skills"}>
             <Container>
-                <SectionTitle>My skills</SectionTitle>
+                <SectionTitle>{t('menuSkills')}</SectionTitle>
                 <SectionText>I work in such programs as</SectionText>
                 <FlexWrapper wrap={"wrap"} justify={"space-between"}>
                     <Fade direction={"left"} damping={0.5} duration={300}>

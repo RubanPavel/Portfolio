@@ -4,8 +4,11 @@ import styled from "styled-components";
 import {Container} from "components/Container";
 import {theme} from "styles/Theme";
 import emailjs from '@emailjs/browser';
+import {useTranslation} from "react-i18next";
 
 export const Contact = () => {
+
+    const {t} = useTranslation();
 
     const form = useRef<ElementRef<'form'>>(null);
 
@@ -26,7 +29,7 @@ export const Contact = () => {
         <form ref={form} onSubmit={sendEmail}>
             <StyledContact id={'contacts'}>
                 <Container>
-                    <SectionTitle>Contact</SectionTitle>
+                    <SectionTitle>{t('menuContacts')}</SectionTitle>
                     <ContactText>Want to know more or just chat? <br/> You are welcome!</ContactText>
                     <FormContact>
                         <Field required name="name" placeholder={"Name:"}/>
