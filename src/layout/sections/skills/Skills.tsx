@@ -27,7 +27,7 @@ export const Skills = () => {
         <StyledSkills id={"skills"}>
             <Container>
                 <SectionTitle>{t('menuSkills')}</SectionTitle>
-                <SectionText>I work in such programs as</SectionText>
+                <SectionText>{t('skillsText')}</SectionText>
                 <FlexWrapper wrap={"wrap"} justify={"space-between"}>
                     <Fade direction={"left"} damping={0.5} duration={300}>
                         {skillsArr.map((s, index) => {

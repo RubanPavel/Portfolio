@@ -14,14 +14,13 @@ export const AboutMe = () => {
                 <SectionTitle>{t('menuAbout')}</SectionTitle>
                 <FlexWrapper direction={"column"} align={"center"}>
                     <TitleAbout>
-                        Hi, I'm Pavel – Web Dev from Minsk.<br/> I'm interested in Web Dev and everything connected with
-                        it.
+                        {t('AboutTitle11')}<br/>{t('AboutTitle12')}
                     </TitleAbout>
                     <TitleAbout>
-                        I'm studying at courses "Front-end dev" in IT-Incubator.
+                        {t('AboutTitle2')}
                     </TitleAbout>
                     <TitleAbout>
-                      {t('AboutTitle31')}<br/>{t('AboutTitle32')}
+                        {t('AboutTitle31')}<br/>{t('AboutTitle32')}
                     </TitleAbout>
                 </FlexWrapper>
             </Container>

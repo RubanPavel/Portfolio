@@ -30,11 +30,11 @@ export const Contact = () => {
             <StyledContact id={'contacts'}>
                 <Container>
                     <SectionTitle>{t('menuContacts')}</SectionTitle>
-                    <ContactText>Want to know more or just chat? <br/> You are welcome!</ContactText>
+                    <ContactText>{t('contactText11')} <br/>{t('contactText12')} </ContactText>
                     <FormContact>
-                        <Field required name="name" placeholder={"Name:"}/>
-                        <Field required name="email" placeholder={"Email:"}/>
-                        <Field required name="message"  placeholder={"Message:"} as={"textarea"}/>
+                        <Field required name="name" placeholder={t('placeholderFormName')}/>
+                        <Field required name="email" placeholder={t('placeholderFormEmail')}/>
+                        <Field required name="message" placeholder={t('placeholderFormMessage')} as={"textarea"}/>
                         <Button type={"submit"}>Send message</Button>
                     </FormContact>
                 </Container>
