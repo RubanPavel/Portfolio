@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {theme} from "styles/Theme";
+import {Theme} from "styles/Theme";
 import {Icon} from "icon/Icon";
 import {Link} from "react-scroll";
 
@@ -44,7 +44,7 @@ const StyledMenu = styled.nav`
     justify-content: space-between;
   }
 
-  @media ${theme.media.tablet} {
+  @media ${Theme.media.tablet} {
     display: none;
   }
 
@@ -52,7 +52,7 @@ const StyledMenu = styled.nav`
 `;
 
 const StyledBox = styled.div`
-  @media ${theme.media.tablet} {
+  @media ${Theme.media.tablet} {
     display: none;
   }
 `
@@ -74,11 +74,11 @@ const LinkMenu = styled(Link)`
   color: #828282;
 
   &.active {
-    color: ${theme.colors.font};
+    color: ${Theme.colors.font};
   }
 
   &:hover {
-    color: ${theme.colors.font};
+    color: ${Theme.colors.font};
    }
 
 

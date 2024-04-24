@@ -35,6 +35,12 @@ i18n
                     placeholderFormName: 'Name:',
                     placeholderFormEmail: 'Email:',
                     placeholderFormMessage: 'Message:',
+
+                    seeAllWorks: 'See all works',
+                    hideWorks: 'Hide works',
+
+                    sendMessage: 'Send message',
+
                 },
             },
             ru: {
@@ -64,6 +70,11 @@ i18n
                     placeholderFormName: 'Имя:',
                     placeholderFormEmail: 'Почта:',
                     placeholderFormMessage: 'Сообщение:',
+
+                    seeAllWorks: 'Посмотреть все работы',
+                    hideWorks: 'Скрыть работы',
+
+                    sendMessage: 'Отправить сообщение',
 
                 },
             },

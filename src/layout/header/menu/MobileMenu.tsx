@@ -1,7 +1,7 @@
 import {useOnClickOutside} from "hooks";
 import React, {useEffect, useRef, useState} from "react";
 import styled from "styled-components";
-import {theme} from "styles/Theme";
+import {Theme} from "styles/Theme";
 import {Hamburger} from "./Hamburger";
 
 type menuProps = {
@@ -80,7 +80,7 @@ const Menu = styled.nav<{ show: boolean }>`
   width: 100vw;
   box-shadow: 0 5px 5px -2px gray;
   transition: opacity 0.3s ease, visibility 0.3s ease, height 0.3s ease;
-  @media ${theme.media.tabletMin} {
+  @media ${Theme.media.tabletMin} {
     display: none;
     height: 0;
   }
@@ -92,7 +92,7 @@ const StyledMobileMenu = styled.nav<{ open: boolean }>`
   height: 100%;
   width: 100%;
   position: fixed;
-  background-color: ${theme.colors.primaryBg};
+  background-color: ${Theme.colors.primaryBg};
   opacity: 0.9;
   z-index: 1;
 
@@ -103,11 +103,11 @@ const StyledMobileMenu = styled.nav<{ open: boolean }>`
   transition: transform 0.3s ease-in-out;
   transform: ${({open}) => (open ? "translateX(0)" : "translateX(-100%)")};
 
-  @media ${theme.media.tablet} {
+  @media ${Theme.media.tablet} {
     width: 100%;
   }
 
-  @media ${theme.media.tabletMin} {
+  @media ${Theme.media.tabletMin} {
     display: none;
   }
 `;
@@ -118,12 +118,12 @@ const ListItem = styled.li`
 `
 const Link = styled.a`
   font-size: 30px;
-  color: ${theme.colors.font};
+  color: ${Theme.colors.font};
   font-weight: 500;
   line-height: 1.5;
 
   :hover {
-    color: ${theme.colors.font};
+    color: ${Theme.colors.font};
     opacity: 0.7;
   }
 `

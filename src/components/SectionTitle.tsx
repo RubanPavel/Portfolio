@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {theme} from "styles/Theme";
+import {Theme} from "styles/Theme";
 
 export const SectionTitle = styled.h2`
   margin-bottom: 80px;
@@ -15,7 +15,7 @@ export const SectionTitle = styled.h2`
     display: inline-block;
     width: 70px;
     height: 2px;
-    background-color: ${theme.colors.font};
+    background-color: ${Theme.colors.font};
 
     position: absolute;
     left: 50%;

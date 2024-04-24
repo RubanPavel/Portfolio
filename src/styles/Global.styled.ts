@@ -1,5 +1,5 @@
 import {createGlobalStyle} from "styled-components";
-import {theme} from "styles/Theme";
+import {Theme} from "styles/Theme";
 
 export const GlobalStyled = createGlobalStyle`
 
@@ -12,7 +12,7 @@ export const GlobalStyled = createGlobalStyle`
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: ${theme.colors.font};
+    color: ${Theme.colors.font};
     line-height: 1.2;
 
    
@@ -58,17 +58,17 @@ export const GlobalStyled = createGlobalStyle`
   section {
     padding: 100px 0;
 
-    @media ${theme.media.tablet}{
+    @media ${Theme.media.tablet}{
       padding: 70px 0;
     }
   }
 
   section:nth-of-type(odd) {
-    background-color: ${theme.colors.primaryBg};
+    background-color: ${Theme.colors.primaryBg};
   }
 
   section:nth-of-type(even) {
-    background-color: ${theme.colors.secondaryBg};
+    background-color: ${Theme.colors.secondaryBg};
   }
   
   

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import {Icon} from "icon/Icon";
 import {FlexWrapper} from 'components/FlexWrapper';
 import {Container} from 'components/Container';
-import {theme} from "styles/Theme";
+import {Theme} from "styles/Theme";
 import Typewriter from "typewriter-effect";
 import {t} from "i18next";
 
@@ -34,15 +34,7 @@ const footerData = [
     width: "50px",
     viewBox: "0 0 24 24",
     fill: "#666666"
-  },
-  {
-    iconId: "WA_Logo",
-    href: "https://github.com/RubanPavel",
-    height: "50px",
-    width: "50px",
-    viewBox: "0 0 25 25",
-    fill: "#666666"
-  },
+  }
 
 
 ];
@@ -72,7 +64,7 @@ export const Footer = () => {
               )
             })}
           </SocialList>
-          <Copyright>Like me on LinkedIn, GitHub, Telegram, Whatsapp </Copyright>
+          <Copyright>Satisfied with me? Please contact me</Copyright>
           <Copyright>© 2023 Pavel Ruban, All Rights Reserved. </Copyright>
         </FlexWrapper>
       </Container>
@@ -81,7 +73,7 @@ export const Footer = () => {
 };
 
 const StyledFooter = styled.footer`
-  background-color: ${theme.colors.secondaryBg};
+  background-color: ${Theme.colors.secondaryBg};
   padding: 40px 0;
   
 `
@@ -96,7 +88,7 @@ const SocialList = styled.ul`
   display: flex;
   gap: 30px;
   
-  @media ${theme.media.mobile} {
+  @media ${Theme.media.mobile} {
     svg{
       transform: scale(.8);
     }

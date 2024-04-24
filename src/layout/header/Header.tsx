@@ -3,7 +3,7 @@ import styled from "styled-components";
 import {Menu} from "layout/header/menu/Menu";
 import {Container} from "components/Container";
 import {FlexWrapper} from "components";
-import {theme} from "styles/Theme";
+import {Theme} from "styles/Theme";
 import {MobileMenu} from "layout/header/menu/MobileMenu";
 import {useTranslation} from "react-i18next";
 
@@ -37,10 +37,10 @@ const StyledHeader = styled.header`
   left: 0;
   right: 0;
   z-index: 1000;
-  background-color: ${theme.colors.primaryBg};
+  background-color: ${Theme.colors.primaryBg};
 
 
-  @media ${theme.media.tablet} {
+  @media ${Theme.media.tablet} {
     padding: 0;
   }
 `;

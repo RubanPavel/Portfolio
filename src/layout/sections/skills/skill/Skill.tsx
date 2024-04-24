@@ -2,7 +2,7 @@ import {Icon} from "icon/Icon";
 import React from "react";
 import styled from "styled-components";
 import {FlexWrapper} from "components";
-import {theme} from "styles/Theme";
+import {Theme} from "styles/Theme";
 
 
 type propsSkill = {
@@ -29,16 +29,16 @@ const StyledSkill = styled.div`
   //width: 33%;
   padding: 40px 15px;
 
-  @media ${theme.media.tablet} {
-    width: 33%;
+  @media ${Theme.media.tablet} {
+   /* width: 33%;*/
     svg {
       transform: scale(.8);
     }
   }
 
-  @media ${theme.media.mobile} {
-    width: 50%;
-    transform: scale(.9);
+  @media ${Theme.media.mobile} {
+    /*width: 50%;*/
+    transform: scale(.99);
     padding: 10px 5px;
   }
 `;
@@ -50,11 +50,11 @@ const SkillTitle = styled.h3`
   font-size: 14px;
   font-weight: 400;
 
-  @media ${theme.media.tablet} {
+  @media ${Theme.media.tablet} {
     padding: 15px 0 15px 0;
   }
 
-  @media ${theme.media.mobile} {
+  @media ${Theme.media.mobile} {
     padding: 15px 0 15px 0;
   }
 `;

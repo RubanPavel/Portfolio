@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import {theme} from "styles/Theme";
+import {Theme} from "styles/Theme";
 
 
 export type Props = {
@@ -34,7 +34,7 @@ const StyledHamburger = styled.button<{ open: boolean }>`
   outline: none;
   z-index: 1;
 
-  @media ${theme.media.tabletMin} {
+  @media ${Theme.media.tabletMin} {
     display: none;
   }
  
@@ -45,7 +45,7 @@ const StyledHamburger = styled.button<{ open: boolean }>`
     border-radius: 10px;
     transition: all 0.3s linear;
     transform-origin: 1px;
-    background-color: ${theme.colors.font};
+    background-color: ${Theme.colors.font};
 
     :first-child {
       transform: ${({open}) => (open ? "rotate(45deg)" : "rotate(0)")};

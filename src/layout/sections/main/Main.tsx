@@ -4,7 +4,7 @@ import {Container} from "components/Container";
 import styled from "styled-components";
 import {useTranslation} from "react-i18next";
 import {LanguageSwitch} from "layout/sections/main/button/LanguageSwitch";
-import {theme} from "styles/Theme";
+import {Theme} from "styles/Theme";
 import Typewriter from 'typewriter-effect';
 
 
@@ -48,7 +48,7 @@ const MainWrapper = styled.div`
   align-items: center;
   flex-wrap: wrap;
   
-  @media ${theme.media.tablet}{
+  @media ${Theme.media.tablet}{
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -72,7 +72,7 @@ const Name = styled.h2`
   font-size: 48px;
   font-weight: 500;
 
-  @media ${theme.media.tablet}{
+  @media ${Theme.media.tablet}{
     width: auto;
   }
 `
@@ -82,7 +82,7 @@ const Title = styled.h1`
   font-size: 18px;
   font-weight: 400;
   
-  @media ${theme.media.tablet}{
+  @media ${Theme.media.tablet}{
     padding-top: 5px;
   }
   
